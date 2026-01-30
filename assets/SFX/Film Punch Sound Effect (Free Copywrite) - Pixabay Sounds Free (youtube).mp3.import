@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://wan1oojqkwth"
+path="res://.godot/imported/Film Punch Sound Effect (Free Copywrite) - Pixabay Sounds Free (youtube).mp3-8482b912ee017fbac73751be71df69d5.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Film Punch Sound Effect (Free Copywrite) - Pixabay Sounds Free (youtube).mp3"
+dest_files=["res://.godot/imported/Film Punch Sound Effect (Free Copywrite) - Pixabay Sounds Free (youtube).mp3-8482b912ee017fbac73751be71df69d5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

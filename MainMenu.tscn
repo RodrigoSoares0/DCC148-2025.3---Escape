@@ -1,0 +1,65 @@
+[gd_scene load_steps=6 format=3 uid="uid://du6kglpiqy1oi"]
+
+[ext_resource type="Script" uid="uid://nlrmkjcvhb3p" path="res://MainMenu.gd" id="1_i26rj"]
+[ext_resource type="AudioStream" uid="uid://dgs4ov5yxhkc4" path="res://assets/SFX/Space Cinematic Ambient Free Music No Copyright - Royalty Free Music  Copyright Free  Tunetank (youtube).mp3" id="2_eiy7p"]
+[ext_resource type="Texture2D" uid="uid://c6dkcfjw616yq" path="res://assets/BG/background-3901037_1920.jpg" id="2_h7a2f"]
+
+[sub_resource type="FontVariation" id="FontVariation_qoqlk"]
+
+[sub_resource type="FontVariation" id="FontVariation_iwfq2"]
+base_font = SubResource("FontVariation_qoqlk")
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_i26rj")
+
+[node name="Background39010371920" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_h7a2f")
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 541.0
+offset_top = 375.0
+offset_right = 598.0
+offset_bottom = 406.0
+text = "Iniciar"
+
+[node name="Credits" type="Button" parent="."]
+layout_mode = 0
+offset_left = 533.0
+offset_top = 411.0
+offset_right = 606.0
+offset_bottom = 442.0
+text = "Creditos"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 500.0
+offset_top = 452.0
+offset_right = 643.0
+offset_bottom = 483.0
+text = "Sair"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_eiy7p")
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 412.0
+offset_top = 200.0
+offset_right = 722.0
+offset_bottom = 334.0
+theme_override_fonts/font = SubResource("FontVariation_iwfq2")
+theme_override_font_sizes/font_size = 50
+text = "ESCAPE"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="StartButton" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

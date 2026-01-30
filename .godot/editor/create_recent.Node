@@ -1,0 +1,14 @@
+Label
+Button
+OmniLight3D
+MeshInstance3D
+AudioStreamPlayer
+AudioStreamPlayer3D
+AudioStreamPlayer3D      - Matches the "sound" keyword.
+Timer
+CollisionShape3D
+Area3D
+VBoxContainer
+Control
+CanvasLayer
+StaticBody3D

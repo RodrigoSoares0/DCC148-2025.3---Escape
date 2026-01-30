@@ -1,0 +1,35 @@
+[gd_scene load_steps=6 format=3 uid="uid://d2i17r0ibqgyw"]
+
+[ext_resource type="Script" uid="uid://dhb6ytawyj7l5" path="res://Item.gd" id="1_bp1wp"]
+[ext_resource type="AudioStream" uid="uid://w4huderlolef" path="res://assets/SFX/Collect Item sound effect - SFX Source (youtube).mp3" id="2_ph0dh"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ph0dh"]
+emission_enabled = true
+emission = Color(0.0071526146, 0.003594212, 0.9999992, 1)
+emission_energy_multiplier = 5.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_l6og8"]
+material = SubResource("StandardMaterial3D_ph0dh")
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_bp1wp"]
+
+[node name="Item" type="Area3D" groups=["Item"]]
+transform = Transform3D(0.05, 0, 0, 0, 0.05, 0, 0, 0, 0.05, 0, 0, 0)
+script = ExtResource("1_bp1wp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("SphereMesh_l6og8")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1.1, 0, 0, 0, 1.1, 0, 0, 0, 1.1, 0, 0, 0)
+shape = SubResource("SphereShape3D_bp1wp")
+
+[node name="AudioStreamPlayer3D" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("2_ph0dh")
+
+[node name="OmniLight3D" type="OmniLight3D" parent="."]
+light_color = Color(0.007843138, 0.003921569, 1, 1)
+light_energy = 5.0
+omni_range = 1.0
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dgs4ov5yxhkc4"
+path="res://.godot/imported/Space Cinematic Ambient Free Music No Copyright - Royalty Free Music  Copyright Free  Tunetank (youtube).mp3-c6b44d37353e4f391ed089faa7751b32.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Space Cinematic Ambient Free Music No Copyright - Royalty Free Music  Copyright Free  Tunetank (youtube).mp3"
+dest_files=["res://.godot/imported/Space Cinematic Ambient Free Music No Copyright - Royalty Free Music  Copyright Free  Tunetank (youtube).mp3-c6b44d37353e4f391ed089faa7751b32.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

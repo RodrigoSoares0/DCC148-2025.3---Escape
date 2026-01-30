@@ -1,0 +1,71 @@
+[gd_scene load_steps=4 format=3 uid="uid://bq7kjwwnh2x8n"]
+
+[ext_resource type="Script" uid="uid://dbrb353o7smit" path="res://Credits.gd" id="1_4qwwl"]
+[ext_resource type="Texture2D" uid="uid://c6dkcfjw616yq" path="res://assets/BG/background-3901037_1920.jpg" id="2_k2yj5"]
+[ext_resource type="AudioStream" uid="uid://dgs4ov5yxhkc4" path="res://assets/SFX/Space Cinematic Ambient Free Music No Copyright - Royalty Free Music  Copyright Free  Tunetank (youtube).mp3" id="2_obosj"]
+
+[node name="Credits" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_4qwwl")
+
+[node name="Background39010371920" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("2_k2yj5")
+
+[node name="Voltar" type="Button" parent="."]
+layout_mode = 0
+offset_left = 1005.0
+offset_top = 571.0
+offset_right = 1148.0
+offset_bottom = 602.0
+text = "Voltar"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_obosj")
+autoplay = true
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 2.0
+offset_top = -2.0
+offset_right = 882.0
+offset_bottom = 723.0
+text = "https://sketchfab.com/3d-models/nathan-animated-003-walking-3d-man-143a2b1ea5eb4385ae90a73657aca3bc
+https://sketchfab.com/3d-models/character-spiderwatch-wrangler-take-two-266061e32fc9472082b9ab2696bc0536
+https://sketchfab.com/3d-models/alligator-walking-upright-c23101cf5b3349668ef320e94e041b4d
+https://sketchfab.com/3d-models/alien-walk-f339a62af93d406caa64aad1c7851838
+
+Song: Tunetank - Stasis (No Copyright Music)
+Music provided by Tunetank.
+
+Song: White Bat Audio - Dusk (No Copyright Music)
+Music provided by White Bat Audio.
+
+Song: White Bat Audio - The Hunger (No Copyright Music)
+Music provided by White Bat Audio.
+
+Song: White Bat Audio - Blood Moon (No Copyright Music)
+Music provided by White Bat Audio.
+
+Song: Collect Item sound effect
+Music provided by SFX Source (YouTube)
+
+Song: Film Punch Sound Effect
+Music provided by PixabayFreeSounds (YouTube)
+
+Song: Laser Gun Sound Effect
+Music provided by Seaguli (YouTube)"
+
+[node name="Label2" type="Label" parent="."]
+layout_mode = 0
+offset_left = 1001.0
+offset_top = 322.0
+offset_right = 1117.0
+offset_bottom = 345.0
+text = "Rodrigo Soares"
+
+[connection signal="pressed" from="Voltar" to="." method="_on_voltar_pressed"]

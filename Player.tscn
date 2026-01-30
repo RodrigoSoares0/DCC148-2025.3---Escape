@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://otiiaojn5a2e"]
+
+[ext_resource type="Script" uid="uid://mxscwmkw7maq" path="res://Player.gd" id="1_kpjcp"]
+[ext_resource type="PackedScene" uid="uid://cfmdt7b6bikrj" path="res://assets/nathan_animated_003_-_walking_3d_man.glb" id="2_kpjcp"]
+[ext_resource type="AudioStream" uid="uid://wan1oojqkwth" path="res://assets/SFX/Film Punch Sound Effect (Free Copywrite) - Pixabay Sounds Free (youtube).mp3" id="3_kne1u"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_kne1u"]
+height = 1.8388672
+radius = 0.31982422
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_kpjcp")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.18048096, 0)
+shape = SubResource("CylinderShape3D_kne1u")
+
+[node name="CameraPivot" type="Node3D" parent="."]
+
+[node name="Camera3D" type="Camera3D" parent="CameraPivot"]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0.8522305, 0.1414684)
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("2_kpjcp")]
+transform = Transform3D(0.009, 0, 0, 0, 0.009, 0, 0, 0, 0.009, 0, -0.717, 0)
+
+[node name="HurtSound" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_kne1u")

@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://cqc2ow2cgsj60"]
+
+[ext_resource type="Script" uid="uid://237tqbiytwrx" path="res://Enemy.gd" id="1_tt7e2"]
+[ext_resource type="PackedScene" uid="uid://bddstf153ji8" path="res://sketchfab_scene1.tscn" id="2_s7bn3"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_s7bn3"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_2hac7"]
+radius = 0.28222656
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_2hac7"]
+
+[node name="Enemy" type="CharacterBody3D"]
+transform = Transform3D(-0.1, 0, -8.742278e-09, 0, 0.1, 0, 8.742278e-09, 0, -0.1, 0, 0, 0)
+script = ExtResource("1_tt7e2")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+target_desired_distance = 0.1
+debug_enabled = true
+
+[node name="DetectionArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="DetectionArea"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, -0.31386286, 0)
+shape = SubResource("SphereShape3D_s7bn3")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.05520898, 0)
+shape = SubResource("CapsuleShape3D_2hac7")
+
+[node name="Sketchfab_Scene1" parent="." instance=ExtResource("2_s7bn3")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, -1.0168725, 0)
+
+[node name="WaitTimer" type="Timer" parent="."]
+
+[node name="AttackArea" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AttackArea"]
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 1.01667075e-08, -0.338099, -0.11629358)
+shape = SubResource("SphereShape3D_2hac7")
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_entered" from="AttackArea" to="." method="_on_attack_area_body_entered"]
+
+[editable path="Sketchfab_Scene1"]

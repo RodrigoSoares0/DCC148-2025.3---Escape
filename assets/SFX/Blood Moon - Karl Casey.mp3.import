@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dhgs1xlka4el2"
+path="res://.godot/imported/Blood Moon - Karl Casey.mp3-2941d21604265a341398a20134176983.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Blood Moon - Karl Casey.mp3"
+dest_files=["res://.godot/imported/Blood Moon - Karl Casey.mp3-2941d21604265a341398a20134176983.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

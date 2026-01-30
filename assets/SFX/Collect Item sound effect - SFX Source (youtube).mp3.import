@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://w4huderlolef"
+path="res://.godot/imported/Collect Item sound effect - SFX Source (youtube).mp3-e00b7287efd8c210e7585d2fd51b17ac.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Collect Item sound effect - SFX Source (youtube).mp3"
+dest_files=["res://.godot/imported/Collect Item sound effect - SFX Source (youtube).mp3-e00b7287efd8c210e7585d2fd51b17ac.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,44 @@
+[gd_scene load_steps=3 format=3 uid="uid://t254mna8ltl8"]
+
+[ext_resource type="Script" uid="uid://d0gm08hvjerim" path="res://GameOver.gd" id="1_40baj"]
+[ext_resource type="Texture2D" uid="uid://b1l4v7u6f4nbi" path="res://assets/BG/gettyimages-1326960085-640x640.jpg" id="2_a1htc"]
+
+[node name="GameOver" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_40baj")
+
+[node name="Gettyimages1326960085640x640" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(1.5, 1.5)
+texture = ExtResource("2_a1htc")
+
+[node name="Restart" type="Button" parent="."]
+layout_mode = 0
+offset_left = 502.0
+offset_top = 376.0
+offset_right = 645.0
+offset_bottom = 407.0
+text = "Jogar Novamente"
+
+[node name="StartingScreen" type="Button" parent="."]
+layout_mode = 0
+offset_left = 504.0
+offset_top = 433.0
+offset_right = 647.0
+offset_bottom = 464.0
+text = "Menu Inicial"
+
+[node name="Quit" type="Button" parent="."]
+layout_mode = 0
+offset_left = 506.0
+offset_top = 483.0
+offset_right = 649.0
+offset_bottom = 514.0
+text = "Sair"
+
+[connection signal="pressed" from="Restart" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="StartingScreen" to="." method="_on_starting_screen_pressed"]
+[connection signal="pressed" from="Quit" to="." method="_on_quit_pressed"]

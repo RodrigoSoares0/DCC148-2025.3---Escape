@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ddf545m0c68hw"
+path="res://.godot/imported/Dusk - Karl Casey.mp3-6113bb3a70e62a8f7d051c3dd18735e9.mp3str"
+
+[deps]
+
+source_file="res://assets/SFX/Dusk - Karl Casey.mp3"
+dest_files=["res://.godot/imported/Dusk - Karl Casey.mp3-6113bb3a70e62a8f7d051c3dd18735e9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

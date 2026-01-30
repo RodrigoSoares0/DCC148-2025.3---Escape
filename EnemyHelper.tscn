@@ -1,0 +1,73 @@
+[gd_scene load_steps=4 format=3 uid="uid://dekkn6beloqhm"]
+
+[ext_resource type="Script" uid="uid://dam5mfnd0fpbk" path="res://EnemyHelper.gd" id="1_lol63"]
+[ext_resource type="PackedScene" uid="uid://d13ybss8l1era" path="res://assets/alligator_walking_upright.glb" id="2_yboy7"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_lol63"]
+radius = 0.7519531
+height = 1.9919434
+
+[node name="EnemyHelper" type="CharacterBody3D"]
+transform = Transform3D(-0.07, 0, -6.119594e-09, 0, 0.07, 0, 6.119594e-09, 0, -0.07, 0, 0, 0)
+script = ExtResource("1_lol63")
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0008545, 0)
+shape = SubResource("CapsuleShape3D_lol63")
+
+[node name="WaitTimer" type="Timer" parent="."]
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("2_yboy7")]
+transform = Transform3D(-1, 0, -8.742278e-08, 0, 1, 0, 8.742278e-08, 0, -1, 0, 0, 0)
+
+[node name="Skeleton3D" parent="Sketchfab_Scene/Sketchfab_model/Alliga walking_Fbx/Object_2/RootNode/Object_4" index="0"]
+bones/1/position = Vector3(0.19744699, 0.57120353, 0)
+bones/1/rotation = Quaternion(0, 0, 0.023059508, 0.9997341)
+bones/6/position = Vector3(2.7668648, 8.0812645, 57.724197)
+bones/7/rotation = Quaternion(-0.03225878, 0.031754572, 0.0012004321, 0.9989743)
+bones/9/rotation = Quaternion(0.08296664, -0.0037234004, -0.011922888, 0.9964741)
+bones/16/position = Vector3(1.6987321e-06, -0.00037574762, 20.491453)
+bones/18/position = Vector3(-4.4703484e-07, 3.0517578e-05, 20.491524)
+bones/19/rotation = Quaternion(0.022518056, -0.0020148922, 0.03117003, 0.99925846)
+bones/20/position = Vector3(-9.536742e-07, 2.800369, 7.4098573)
+bones/24/position = Vector3(-0.0017089844, 0.00064086914, -27.825665)
+bones/25/rotation = Quaternion(0.777602, -0.13812257, 0.24375734, 0.5628852)
+bones/26/position = Vector3(-7.6293945e-06, 1.5258789e-05, -26.593994)
+bones/27/rotation = Quaternion(-0.45270962, -0.14924662, 0.01501938, 0.8789504)
+bones/28/position = Vector3(-0.00023651123, 7.6293945e-06, -22.33844)
+bones/29/rotation = Quaternion(0.19580206, 0.23384635, -0.5952151, 0.7434356)
+bones/30/position = Vector3(1.9073486e-06, -1.5258789e-05, -18.815567)
+bones/34/position = Vector3(-1.1444092e-05, -7.6293945e-05, 27.824572)
+bones/35/rotation = Quaternion(0.68994844, 0.42452648, -0.26784524, 0.52154326)
+bones/36/position = Vector3(4.5776367e-05, 0.0007019043, 26.593521)
+bones/37/rotation = Quaternion(-0.03923422, -0.3752687, 0.22463271, 0.89842874)
+bones/38/position = Vector3(0.00036621094, 1.5258789e-05, 22.33847)
+bones/39/rotation = Quaternion(0.011391416, 0.0064706733, -0.058167845, 0.9982209)
+bones/40/position = Vector3(0, 1.525879e-05, 18.814882)
+bones/42/position = Vector3(-28.455193, -2.7656552e-05, 3.0517574e-05)
+bones/43/rotation = Quaternion(-0.2155803, -0.07424496, 0.046686534, 0.9725396)
+bones/44/position = Vector3(-5.722046e-06, 2.670288e-05, -31.998379)
+bones/45/rotation = Quaternion(0.2549757, -0.06768806, 0.08407768, 0.9609041)
+bones/46/position = Vector3(1.5258789e-05, -7.867813e-06, -25.042112)
+bones/47/rotation = Quaternion(-0.5851592, 0.15224066, -0.100410454, 0.79014516)
+bones/48/position = Vector3(1.9073486e-06, 3.33786e-06, -15.749821)
+bones/50/position = Vector3(28.455193, -2.7179714e-05, 3.0517574e-05)
+bones/51/rotation = Quaternion(0.9833715, 0.1713573, 0.0290365, -0.05267002)
+bones/52/position = Vector3(1.7166138e-05, 1.4543533e-05, 31.998716)
+bones/53/rotation = Quaternion(0.71569973, 0.06485178, 0.10290687, 0.6877342)
+bones/54/position = Vector3(0, -1.1444092e-05, 25.042135)
+bones/55/rotation = Quaternion(-0.7178674, -0.015791131, 0.052572742, 0.69401246)
+bones/56/position = Vector3(-2.0980835e-05, 1.5258789e-05, 15.749799)
+bones/58/position = Vector3(-1.19209275e-07, -2.7179714e-05, 3.0517574e-05)
+bones/60/position = Vector3(-4.7683716e-07, 3.0517578e-05, -27.532867)
+bones/62/position = Vector3(-1.1920929e-07, -1.9073486e-05, -27.532698)
+bones/64/position = Vector3(0, -1.9073485e-05, -27.532715)
+bones/66/position = Vector3(-1.0728836e-06, -1.1444092e-05, -27.5327)
+bones/68/position = Vector3(4.7683716e-07, 3.4332275e-05, -27.532715)
+bones/70/position = Vector3(-1.7881393e-07, -3.8146973e-06, -27.5327)
+bones/72/position = Vector3(7.748604e-07, -3.8146973e-06, -27.532715)
+bones/74/position = Vector3(-5.364418e-07, -3.0517578e-05, -27.532715)
+
+[editable path="Sketchfab_Scene"]

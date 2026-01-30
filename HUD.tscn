@@ -1,0 +1,32 @@
+[gd_scene load_steps=2 format=3 uid="uid://cb4dw5duvjpry"]
+
+[ext_resource type="Script" uid="uid://du5i6rdd3cj0v" path="res://HUD.gd" id="1_k5de2"]
+
+[node name="HUD" type="CanvasLayer" groups=["HUD"]]
+script = ExtResource("1_k5de2")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+layout_mode = 0
+offset_right = 238.0
+offset_bottom = 174.0
+
+[node name="HealthLabel" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="ItemLabel" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="MessageLabel" type="Label" parent="Control/VBoxContainer"]
+layout_mode = 2
+
+[node name="MessageTimer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
